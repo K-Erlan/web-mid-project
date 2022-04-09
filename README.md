@@ -1,12 +1,12 @@
 # Web-Programminf-mid-project
 
-Midterm application
-Created with Spring Boot, PostgreSQL, Bootstrap
+### Midterm application
+### Created with Spring Boot, PostgreSQL, Bootstrap
 
-deploy link https://web-app-mid.herokuapp.com/
+### deploy link https://web-app-mid.herokuapp.com/
 
-##This web application created a specially for a teachers. For adding, grading students. 
-##On other words, to add an some information about student.
+## This web application created a specially for a teachers. For adding, grading students. 
+## On other words, to add an some information about student.
 
 ## Screenshots info
 ### This is the main page of web app
@@ -21,4 +21,4 @@ deploy link https://web-app-mid.herokuapp.com/
 ### Let's see!
 ![bandicam 2022-04-09 23-58-18-812](https://user-images.githubusercontent.com/73570898/162585859-3102a39b-4d38-4485-98b7-eae45a191080.jpg)
 
-YouTube video tutorial - https://www.youtube.com/watch?v=kAsxkMNC65E
+## YouTube video tutorial - https://www.youtube.com/watch?v=kAsxkMNC65E
