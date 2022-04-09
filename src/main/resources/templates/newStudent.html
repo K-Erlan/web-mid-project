@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>new student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-text fs-6 fw-bolder">
+                Created by Erlan Kerimbekov Com-20
+        </span>
+    <img src="https://st-0.akipress.org/st_all/bilim/9/1519540999.2.jpg" width="100" height="100" class="d-inline-block align-top" alt="">
+</nav>
+
+<div align = "center">
+    <h1>add new student</h1>
+
+    <div class="col-sm-4">
+
+        <form action="#" th:action="@{/save}" th:object="${student}" method="post">
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Name</label>
+                    <td>
+                        <input type="hidden" th:field="*{studentId}" />
+                        <input type="text" th:field="*{name}" class="form-control" placeholder="Name" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Course</label>
+                    <td>
+                        <input type="text" th:field="*{course}" class="form-control" placeholder="Course" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >GPA</label>
+                    <td>
+                        <input type="text" th:field="*{GPA}" class="form-control" placeholder="GPA" />
+                    </td>
+                </tr>
+            </div>
+
+            <div alight="left">
+                <tr>
+                    <label class="form-label" >Sex</label>
+                    <td>
+                        <input type="text" th:field="*{sex}" class="form-control" placeholder="Sex" />
+                    </td>
+                </tr>
+            </div>
+
+            <tr>
+                <td colspan="2"><button type="submit" class="mt-4 btn btn-primary">Save</button> </td>
+            </tr>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+

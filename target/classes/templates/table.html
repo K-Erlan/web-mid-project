@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student table</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+
+</head>
+<body>
+
+    <h1> List Students </h1>
+
+<div align = "center" >
+    <h3><a  th:href="@{'/addNewStudent'}" class = "btn btn-primary">add new student</a></h3>
+</div>
+
+<table class="table table-info table-striped ">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Course</th>
+        <th scope="col">GPA</th>
+        <th scope="col">Sex</th>
+        <th scope="col">edit</th>
+        <th scope="col">delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${studentList} ">
+        <td th:text="${student.studentId}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.course}"></td>
+        <td th:text="${student.GPA}"></td>
+        <td th:text="${student.sex}"></td>
+        <td>
+            <a th:href="@{'/edit/' + ${student.studentId}}">edit</a>
+        </td>
+        <td>
+            <a th:href="@{'/delete/' + ${student.studentId}}">delete</a>
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+    <div align = "center" >
+        <h3><a  th:href="@{'/'}" class = "btn btn-primary">home page</a></h3>
+    </div>
+</body>
+</html>
